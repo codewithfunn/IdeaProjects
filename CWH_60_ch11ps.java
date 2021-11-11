@@ -41,6 +41,22 @@ class Human extends Monkey implements BasicAnimal{
     }
 }
 
+abstract class TelePhone{
+    abstract void ring ();
+    abstract void lift();
+    abstract void disconnect();
+}
+class SmartTelephone extends TelePhone{
+    public void ring(){
+        System.out.println("ringing....");
+    }
+    public void lift(){
+        System.out.println("answering a call...");
+    }
+    public void disconnect(){
+        System.out.println("Your call has been disconnected....");
+    }
+}
 public class CWH_60_ch11ps {
     public static void main(String[] args) {
         // 1. Create an abstract class pen with methods write() and refills() as abstract method
@@ -49,6 +65,7 @@ public class CWH_60_ch11ps {
         pen.write();
         pen.refills();
         pen.changeNib();
+
         // Creating a class Monkey with jump() and bite() methods. Create a class Human which inherits this Monkey
         // class and implements BasicAnimal interface with eat() and sleep methods
         Human sunny = new Human();
@@ -56,5 +73,12 @@ public class CWH_60_ch11ps {
         sunny.sleep();
         sunny.jump();
         sunny.bite();
+
+        // Create a class Telephone with ring() , lift() and disconnect() methods as abstract methods
+        // Create another class SmartTelephone and demonstrate polymorphism
+        TelePhone  mi9A = new SmartTelephone();
+        mi9A.disconnect();
+        mi9A.lift();
+        mi9A.ring();
     }
 }
