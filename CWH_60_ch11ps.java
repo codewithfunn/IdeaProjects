@@ -60,6 +60,35 @@ class SmartTelephone extends TelePhone{
         System.out.println("Your call has been disconnected....");
     }
 }
+interface  TVRemote{
+    void ON();
+    void OFF();
+}
+interface SmartTVRemote extends TVRemote{
+    void pause();
+    void play();
+    void moveBtn();
+}
+class TV implements SmartTVRemote{
+    public void ON(){
+        System.out.println("Switch ON...");
+    }
+
+    @Override
+    public void OFF() {
+        System.out.println("Switch OFF....");
+    }
+
+    public void pause(){
+        System.out.println("Pausing a video...");
+    }
+    public void play(){
+        System.out.println("Playing a video....");
+    }
+    public void moveBtn(){
+        System.out.println("Moving btn....");
+    }
+}
 public class CWH_60_ch11ps {
     public static void main(String[] args) {
         // 1. Create an abstract class pen with methods write() and refills() as abstract method
@@ -93,5 +122,14 @@ public class CWH_60_ch11ps {
         /* simran.speak(); -> cannot use speak method because the reference is BasicAnimal which does not have speak method */
         simran.sleep();
         simran.eat();
+
+        // 6. Create an interface TVRemote and use it to inherit another interface SmartTVRemote
+        // 7. Create a class TV which implement TVRemote interface from Ques 6
+        TV mi = new TV();
+        mi.ON();
+        mi.OFF();
+        mi.moveBtn();
+        mi.pause();
+        mi.play();
     }
 }
