@@ -6,6 +6,8 @@ interface Camera{
     default void record4KVideo(){
         System.out.println("Recording in 4k......");
     }
+    //  Default methods enable us to add new functionality to existing interfaces without breaking
+    //  older implementation of these interfaces
 }
 interface  Wifi{
     String[] getNetwork();
@@ -44,6 +46,10 @@ class MySmartPhone extends cellPhone1 implements Wifi,Camera{
         System.out.println("Connecting to " + Network);
     }
 
+    @Override
+    public void record4KVideo(){
+        System.out.println("snap nd Recording in 4k Video!");
+    }
 }
 public class CWH_57_default_methods {
     public static void main(String[] args) {
