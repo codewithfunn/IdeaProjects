@@ -3,11 +3,16 @@ package com.company;
 interface Camera{
     void takeSnap();
     void recordVideo();
+    private void greet(){
+        System.out.println("Good Morning sunny!");
+    }
     default void record4KVideo(){
+        greet();
         System.out.println("Recording in 4k......");
     }
     //  Default methods enable us to add new functionality to existing interfaces without breaking
     //  older implementation of these interfaces
+
 }
 interface  Wifi{
     String[] getNetwork();
@@ -46,14 +51,15 @@ class MySmartPhone extends cellPhone1 implements Wifi,Camera{
         System.out.println("Connecting to " + Network);
     }
 
-    @Override
-    public void record4KVideo(){
-        System.out.println("snap nd Recording in 4k Video!");
-    }
+//    @Override
+//    public void record4KVideo(){
+//        System.out.println("snap nd Recording in 4k Video!");
+//    }
 }
 public class CWH_57_default_methods {
     public static void main(String[] args) {
         MySmartPhone ms = new MySmartPhone();
+        // ms.greet();// error (private hai)
         ms.record4KVideo();
         String[] ar =  ms.getNetwork();
         for (String item:ar) {
