@@ -58,5 +58,10 @@ public class CWH_59_polymorphism {
         //cam.getNetworks(); --> Not allowed
         // cam.sampleMeth(); --> Not allowed
         cam.record4KVideo();
+        MySmartPhone1 sm = new MySmartPhone1();
+        sm.takeSnap();
+        sm.callNumber(568);
+        sm.pickCall();
+        sm.getNetwork();
     }
 }
