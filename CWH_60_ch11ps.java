@@ -18,6 +18,28 @@ class FountainPen extends Pen{
 
 }
 
+class Monkey{
+    void jump(){
+        System.out.println("Jumping...");
+    }
+    void bite(){
+        System.out.println("Biting....");
+    }
+}
+
+interface BasicAnimal{
+    void eat();
+    void sleep();
+}
+
+class Human extends Monkey implements BasicAnimal{
+    public void eat(){
+        System.out.println("eating...");
+    }
+    public void sleep(){
+        System.out.println("sleeping....");
+    }
+}
 
 public class CWH_60_ch11ps {
     public static void main(String[] args) {
@@ -27,5 +49,12 @@ public class CWH_60_ch11ps {
         pen.write();
         pen.refills();
         pen.changeNib();
+        // Creating a class Monkey with jump() and bite() methods. Create a class Human which inherits this Monkey
+        // class and implements BasicAnimal interface with eat() and sleep methods
+        Human sunny = new Human();
+        sunny.eat();
+        sunny.sleep();
+        sunny.jump();
+        sunny.bite();
     }
 }
