@@ -33,6 +33,9 @@ interface BasicAnimal{
 }
 
 class Human extends Monkey implements BasicAnimal{
+    void speak(){
+        System.out.println("I am human being!! yo yo...");
+    }
     public void eat(){
         System.out.println("eating...");
     }
@@ -80,5 +83,15 @@ public class CWH_60_ch11ps {
         mi9A.disconnect();
         mi9A.lift();
         mi9A.ring();
+
+        // 5. Demonstrate polymorphism using monkey class from Ques 3
+        Monkey m1 = new Human();
+        m1.bite();
+        m1.jump();
+        /* m1.speak(); -> cannot use speak method because the reference is monkey which does not have speak method */
+        BasicAnimal simran = new Human();
+        /* simran.speak(); -> cannot use speak method because the reference is BasicAnimal which does not have speak method */
+        simran.sleep();
+        simran.eat();
     }
 }
