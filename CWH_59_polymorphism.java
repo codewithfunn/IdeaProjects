@@ -1,5 +1,6 @@
 package com.company;
 
+// Implementing an interface forces methods implementation
 interface Camera2{
     void takeSnap();
     void recordVideo();
