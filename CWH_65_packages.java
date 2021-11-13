@@ -6,6 +6,7 @@ public class CWH_65_packages {
 //        Scanner sc = new Scanner(System.in);
         // providing the full path where the Scanner class reside
         java.util.Scanner sc = new java.util.Scanner(System.in);
-        System.out.println("This is my scanner class");
+        int a = sc.nextInt();
+        System.out.println("This is my scanner taking input as "+ a);
     }
 }
