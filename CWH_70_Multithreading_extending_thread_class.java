@@ -1,6 +1,7 @@
 package com.company;
 
 class MyThread1 extends Thread{
+    @Override
     public void run(){
         int i = 0;
         while(i < 100){
@@ -11,6 +12,7 @@ class MyThread1 extends Thread{
     }
 }
 class MyThread2 extends Thread{
+    @Override
     public void run(){
         int i= 0;
         while (i<100){
