@@ -6,6 +6,18 @@ class MyTh1 extends Thread{
         while(i<450){
             System.out.println("I am thread 1");
             i++;
+            /*
+            Sleep() Method :
+        1. The sleep() method in Java is useful to put a thread to sleep for a specified amount of time.
+        2. When we put a thread to sleep, the thread scheduler picks and executes another thread in the queue.
+        3. Sleep() method returns void.
+        4. sleep() method can be used for any thread, including the main() thread also.*/
+            try{
+                Thread.sleep(500);
+            }catch (Exception e){
+                System.out.println(e);
+            }
+
         }
     }
 }
@@ -31,11 +43,12 @@ public class CWH_75_thread_methods {
         the current thread to pause execution until t's thread terminates.
     3.  Join() method puts the current thread on wait until the thread on which it is called is dead.
      */
-        try {
-            t1.join();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+//        try {
+//            t1.join();
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+
         t2.start();
     }
 }
