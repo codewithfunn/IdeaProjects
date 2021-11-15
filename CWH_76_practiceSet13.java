@@ -33,12 +33,29 @@ public class CWH_76_practiceSet13 {
         // Add a sleep method in welcome thread of question1 to delay its execution for 200ms
 
         // Demonstrate getPriority() and setPriority() methods in java threads
+//        t1.setPriority(7);
+//        t2.setPriority(9);
+//
+//        System.out.println("the priority of t1 is " + t1.getPriority());
+//        System.out.println("the priority of t2 is " + t2.getPriority());
+//        t1.start();
+//        t2.start();
+
+        // how do you get state of a given thread in java
         t1.setPriority(7);
         t2.setPriority(9);
 
         System.out.println("the priority of t1 is " + t1.getPriority());
         System.out.println("the priority of t2 is " + t2.getPriority());
+
+        System.out.println("the state of t1 before start() is " + t1.getState());
+        System.out.println("the state of  t2 before start() is " + t2.getState());
+
         t1.start();
         t2.start();
+
+        System.out.println("the state of t1 after start() is " + t1.getState());
+        System.out.println("the state of t2 after start() is " + t2.getState());
+
     }
 }
