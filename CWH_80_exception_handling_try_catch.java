@@ -1,6 +1,6 @@
 package com.company;
 
-public class CWH_exception_handling_try_catch {
+public class CWH_80_exception_handling_try_catch {
     public static void main(String[] args){
 
         /*
