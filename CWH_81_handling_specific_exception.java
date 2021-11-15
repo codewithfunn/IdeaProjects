@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class CWH_handling_specific_exception {
+public class CWH_81_handling_specific_exception {
     public static void main(String[] args){
         // Handling specific exception
         // In java, we can handle specific exceptions by typing multiple catch blocks
