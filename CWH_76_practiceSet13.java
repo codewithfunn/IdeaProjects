@@ -57,5 +57,7 @@ public class CWH_76_practiceSet13 {
         System.out.println("the state of t1 after start() is " + t1.getState());
         System.out.println("the state of t2 after start() is " + t2.getState());
 
+        // how do you get reference to the current thread in java
+        System.out.println("the current state of Thread is " + Thread.currentThread().getState());
     }
 }
