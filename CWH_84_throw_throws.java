@@ -1,4 +1,9 @@
 package com.company;
+
+/*
+The Throw exception
+    The Throw keyword is used to throw an exception explicitly by the programmer*/
+
 /*
 The Throws exception
     * The java throws keywords is used to declare an exception. This gives an information to the
