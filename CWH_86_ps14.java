@@ -19,5 +19,20 @@ public class CWH_86_ps14 {
         int d = 0;
         //int res = c/d; return runtime exception
         //System.out.println(res); return runtime / zero exception
+
+        // 2. Write a java program that prints "Hafta" during Arithmetic exception and "Hehe" during an Illegal
+        //    argument exception
+
+        try{
+            int a = 6666/0;
+        }
+        catch (IllegalArgumentException e){
+            System.out.println("Hehe");
+        }
+        catch (ArithmeticException e){
+            System.out.println("Hafta");
+        }
+
+
     }
 }
