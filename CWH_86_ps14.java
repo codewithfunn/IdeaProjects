@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class CWH_86_ps14 {
     public static void main(String[] args){
         // 1.  write a java program to demonstrate syntax, logical & runtime errors
@@ -33,6 +35,29 @@ public class CWH_86_ps14 {
             System.out.println("Hafta");
         }
 
+        // 3. Write a program that allows you to keep accessing an array until a valid index is given . If
+        //    max retries 5 print "Error"
 
+        int [] marks = new int[3];
+        marks[0] = 45;
+        marks[1] = 53;
+        marks[2] = 9;
+        boolean flags = true;
+        Scanner sc = new Scanner(System.in);
+        int ind;
+        int i = 0;
+        while(flags && i<5){
+            try {
+                System.out.println("Enter the value of index ");
+                ind = sc.nextInt();
+                System.out.println("The value of marks[ind] is " + marks[ind]);
+                flags = false;
+            }
+            catch (Exception e){
+                System.out.println("Invalid index ");
+                i++;
+            }
+
+        }
     }
 }
