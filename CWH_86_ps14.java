@@ -10,6 +10,36 @@ class MaxRetries extends Exception{
     }
 }
 public class CWH_86_ps14 {
+//    public static void accessingAnArray() throws MaxRetries{
+//        int [] mark =new int[3];
+//        mark[0] = 23;
+//        mark[1] = 25;
+//        mark[2] = 3;
+//        Scanner sc = new Scanner(System.in);
+//        int index ;
+//        int j= 0;
+//        boolean flag = true;
+//
+//        while(flag&&j<5){
+//            try{
+//                System.out.println("Enter the value of index ");
+//                index = sc.nextInt();
+//                System.out.println("the value at "+ index +" is "+ mark[index]);
+//                flag = false;
+//            }
+//            catch (Exception e){
+//                j++;
+//                System.out.println("invalid index number");
+//            }
+//        }
+//        if(j<=6){
+//            try{
+//                throw new MaxRetries();
+//            }catch (MaxRetries e){
+//                System.out.println(e);
+//            }
+//        }
+//    }
     public static void main(String[] args){
         // 1.  write a java program to demonstrate syntax, logical & runtime errors
 
@@ -99,5 +129,6 @@ public class CWH_86_ps14 {
             }
         }
 
+        // Wrap the program in Q3 inside a method which throws your custom Exception not fully understood
     }
 }
